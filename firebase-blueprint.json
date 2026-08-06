@@ -1,0 +1,47 @@
+{
+  "entities": {
+    "Room": {
+      "title": "Room",
+      "description": "Game room storing answers for two players in Friend Sync",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "status": { "type": "string" },
+        "player1": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "selfAnswers": { "type": "object" },
+            "guessAnswers": { "type": "object" },
+            "submitted": { "type": "boolean" }
+          }
+        },
+        "player2": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "selfAnswers": { "type": "object" },
+            "guessAnswers": { "type": "object" },
+            "submitted": { "type": "boolean" }
+          }
+        }
+      },
+      "required": ["code"]
+    }
+  },
+  "firestore": {
+    "collections": {
+      "rooms": {
+        "entity": "Room",
+        "schema": {
+          "$ref": "#/entities/Room"
+        },
+        "allow": {
+          "read": "true",
+          "write": "true"
+        }
+      }
+    }
+  }
+}

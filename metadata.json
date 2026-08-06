@@ -1,0 +1,6 @@
+{
+  "name": "همگامی دوستان - Friend Sync",
+  "description": "مسابقه جذاب و سرگرم‌کننده دو نفره به زبان دری برای آزمودن میزان شناخت دوستان از یکدیگر",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .bg-dots {
+    background-image: radial-gradient(#241242 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+  }
+
+  .poster-shadow {
+    box-shadow: 8px 8px 0px 0px #241242;
+  }
+
+  .button-shadow {
+    box-shadow: 4px 4px 0px 0px #241242;
+  }
+
+  .thick-border {
+    border: 3px solid #241242;
+  }
+}
