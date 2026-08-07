@@ -140,6 +140,11 @@ export const QuizScreen: React.FC<QuizScreenProps> = ({
               );
             })}
           </div>
+
+          {/* Dari Hint Below Options */}
+          <div lang="fa-AF" dir="rtl" className="mt-5 pt-3 border-t-2 border-dashed border-[#241242]/20 text-center text-xs font-bold text-[#241242]/80 bg-[#FFE066]/30 p-2 rounded-lg border border-[#241242]/30">
+            💡 روی یک حیوان لمس کن تا انتخابت ثبت شود و به سوال بعدی بروی.
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>

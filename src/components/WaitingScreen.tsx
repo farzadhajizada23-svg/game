@@ -79,6 +79,10 @@ export const WaitingScreen: React.FC<WaitingScreenProps> = ({
             </button>
           </div>
 
+          <p lang="fa-AF" dir="rtl" className="text-xs font-black text-[#241242] bg-white/80 p-2 rounded-lg border border-[#241242] mb-3 text-center">
+            📌 مطمئن شو که دوستت همین کد را وارد کرده.
+          </p>
+
           <button
             onClick={handleCopyLink}
             className="w-full py-2.5 px-3 bg-[#FF4D8D] text-white font-bold text-xs rounded-lg border-2 border-[#241242] shadow-[2px_2px_0px_0px_#241242] flex items-center justify-center gap-2 hover:bg-[#ff3377] active:translate-y-0.5 cursor-pointer"

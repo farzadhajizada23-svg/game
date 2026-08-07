@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Rocket, RotateCcw, Calendar, BookOpen, GraduationCap, Sparkles } from 'lucide-react';
+import { Sparkles, MapPin, ArrowRight, RotateCcw } from 'lucide-react';
 
 interface TeaserScreenProps {
   onPlayAgain: () => void;
@@ -8,77 +8,108 @@ interface TeaserScreenProps {
 
 export const TeaserScreen: React.FC<TeaserScreenProps> = ({ onPlayAgain }) => {
   return (
-    <div className="w-full max-w-[420px] mx-auto px-4 py-8 flex flex-col items-center">
-      {/* Poster Style Card */}
+    <div className="w-full max-w-[420px] mx-auto px-4 py-4 flex flex-col items-center">
+      {/* Full-bleed Poster Container */}
       <motion.div
-        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        initial={{ scale: 0.95, opacity: 0, y: 15 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
-        className="w-full bg-[#FFFDF6] border-[3px] border-[#241242] rounded-3xl p-6 poster-shadow text-center relative overflow-hidden mb-6"
+        className="w-full bg-[#241242] text-[#FFF3C4] border-[3px] border-[#FFFDF6] rounded-3xl p-6 sm:p-7 shadow-[8px_8px_0px_0px_#FF4D8D] text-center relative overflow-hidden mb-5 flex flex-col items-center"
       >
-        {/* Top Decorative Sticker */}
-        <div className="inline-flex items-center gap-1.5 bg-[#FF4D8D] text-white px-3.5 py-1 rounded-full text-xs font-black border-2 border-[#241242] shadow-[2px_2px_0px_0px_#241242] mb-4 transform -rotate-2">
-          <Rocket className="w-4 h-4" />
-          <span>خبر ویژه و فوری! 📣</span>
+        {/* Eyebrow Tag */}
+        <div
+          lang="fa-AF"
+          dir="rtl"
+          className="inline-flex items-center justify-center bg-[#FF4D8D] text-white px-3.5 py-1 rounded-full text-xs font-black border-2 border-[#FFFDF6] shadow-[2px_2px_0px_0px_#00B89C] mb-3 tracking-wide"
+        >
+          <Sparkles className="w-3.5 h-3.5 ml-1.5" />
+          <span>به زودی</span>
         </div>
 
-        {/* Announcement Title */}
-        <h2 className="text-3xl font-extrabold text-[#241242] font-['Baloo_Bhaijaan_2',sans-serif] leading-snug mb-2">
-          صنف‌های جدید در راه است! 🚀
-        </h2>
+        {/* Big Bold Headline Wordmark - COMPIX (Latin script) */}
+        <h1 className="text-5xl sm:text-6xl font-black text-[#FFE066] font-['Baloo_Bhaijaan_2',sans-serif] tracking-wider uppercase leading-none my-1 drop-shadow-[3px_3px_0px_#FF4D8D]">
+          COMPIX
+        </h1>
 
-        <p className="text-xs font-bold text-[#241242]/70 mb-6">
-          فرصت فوق‌العاده برای ارتقای دانش و مهارت‌های شما
+        {/* Sub-line (Dari) */}
+        <p
+          lang="fa-AF"
+          dir="rtl"
+          className="text-lg sm:text-xl font-black text-white font-['Vazirmatn',sans-serif] my-2 text-center"
+        >
+          یک صنف پنج هفتهیی هوش مصنوعی
         </p>
 
-        {/* Class Placeholder Banner */}
-        <div className="bg-[#FFE066] border-[2.5px] border-[#241242] rounded-xl p-5 shadow-[4px_4px_0px_0px_#241242] text-right space-y-3 mb-6 relative">
-          <div className="flex items-start gap-2">
-            <GraduationCap className="w-6 h-6 text-[#241242] shrink-0 mt-0.5" />
-            <div>
-              <span className="text-xs font-extrabold text-[#FF4D8D] bg-white px-2 py-0.5 rounded border border-[#241242]">
-                نام صنف آموزشی
-              </span>
-              <h3 className="text-lg font-black text-[#241242] font-['Baloo_Bhaijaan_2',sans-serif] mt-1">
-                دوره تخصصی برنامه‌نویسی وب و هوش مصنوعی 💡
-              </h3>
-            </div>
+        {/* Tagline Line (Dari) */}
+        <p
+          lang="fa-AF"
+          dir="rtl"
+          className="text-xs sm:text-sm font-bold text-[#FFF3C4] opacity-95 my-2 max-w-xs leading-relaxed text-center"
+        >
+          پروژههای واقعی هوش مصنوعی بساز. نیاز به تجربه نیست.
+        </p>
+
+        {/* Location Line (Dari) */}
+        <div
+          lang="fa-AF"
+          dir="rtl"
+          className="inline-flex items-center gap-1.5 bg-white/10 text-[#FFE066] px-3 py-1.5 rounded-xl border border-[#FFE066]/30 text-xs font-black my-2"
+        >
+          <MapPin className="w-3.5 h-3.5 text-[#FF4D8D] shrink-0" />
+          <span>اکادمی محمد اسماعیل آزاد</span>
+        </div>
+
+        {/* Details Strip - 3 quick facts */}
+        <div
+          lang="fa-AF"
+          dir="rtl"
+          className="w-full bg-[#00B89C] text-[#241242] border-2 border-[#FFFDF6] rounded-2xl p-2.5 my-3 grid grid-cols-3 gap-1 shadow-[3px_3px_0px_0px_#FFF3C4]"
+        >
+          <div className="flex flex-col items-center justify-center p-1 text-center">
+            <span className="text-[10px] font-bold text-[#241242]/80">دوره</span>
+            <span className="text-xs font-black text-[#241242]">۵ هفته</span>
           </div>
-
-          <div className="pt-2 border-t-2 border-dashed border-[#241242]/30 flex items-center justify-between text-xs font-extrabold text-[#241242]">
-            <div className="flex items-center gap-1.5">
-              <Calendar className="w-4 h-4 text-[#00B89C]" />
-              <span>تاریخ شروع: ۱۰ سنبله ۱۴۰۵</span>
-            </div>
-
-            <div className="flex items-center gap-1 bg-[#00B89C] text-white px-2 py-0.5 rounded border border-[#241242]">
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>ثبت‌نام به‌زودی</span>
-            </div>
+          <div className="flex flex-col items-center justify-center p-1 text-center border-x-2 border-dashed border-[#241242]/30">
+            <span className="text-[10px] font-bold text-[#241242]/80">تاریخ آغاز</span>
+            <span className="text-[11px] font-black text-[#241242]">[تاریخ آغاز اینجا اضافه شود]</span>
+          </div>
+          <div className="flex flex-col items-center justify-center p-1 text-center">
+            <span className="text-[10px] font-bold text-[#241242]/80">شرایط</span>
+            <span className="text-xs font-black text-[#241242]">ظرفیت محدود</span>
           </div>
         </div>
 
-        {/* Additional Features / Highlights */}
-        <div className="bg-white border-2 border-[#241242] rounded-xl p-4 shadow-[3px_3px_0px_0px_#241242] text-right space-y-2 mb-2">
-          <div className="text-xs font-extrabold text-[#241242] flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4 text-[#FF4D8D]" />
-            <span>ویژگی‌های صنف جدید:</span>
-          </div>
-          <ul className="text-xs text-[#241242]/80 space-y-1 pr-4 list-disc font-semibold">
-            <li>آموزش پروژه‌محور و کاربردی</li>
-            <li>پشتیبانی آنلاین و تمرین‌های تعاملی</li>
-            <li>اعطای گواهینامه معتبر پایان دوره</li>
-          </ul>
-        </div>
+        {/* Closing Punch Line */}
+        <p
+          lang="fa-AF"
+          dir="rtl"
+          className="text-xs font-black text-[#FF4D8D] bg-[#FFE066]/10 px-3 py-1.5 rounded-lg border border-[#FF4D8D]/30 mb-4 text-center"
+        >
+          ظرفیت محدود است. از دست ندهید.
+        </p>
+
+        {/* Single Bold Action Button: معلومات بیشتر */}
+        <button
+          onClick={() => alert('معلومات بیشتر به‌زودی اضافه می‌شود.')}
+          lang="fa-AF"
+          dir="rtl"
+          className="w-full py-3.5 px-6 bg-[#FF4D8D] text-white font-black text-sm sm:text-base font-['Vazirmatn',sans-serif] border-2 border-[#FFFDF6] rounded-xl shadow-[4px_4px_0px_0px_#FFE066] hover:bg-[#ff3377] active:translate-x-0.5 active:translate-y-0.5 transition-all flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span>معلومات بیشتر</span>
+          <ArrowRight className="w-4 h-4 rotate-180" />
+        </button>
       </motion.div>
 
-      {/* Play Again Button */}
+      {/* Quiet, minor "Play again" link */}
       <button
         onClick={onPlayAgain}
-        className="w-full py-4 px-6 bg-[#00B89C] text-white font-black text-lg font-['Baloo_Bhaijaan_2',sans-serif] border-[3px] border-[#241242] rounded-xl shadow-[4px_4px_0px_0px_#241242] hover:bg-[#00a088] active:translate-x-0.5 active:translate-y-0.5 active:shadow-[2px_2px_0px_0px_#241242] transition-all flex items-center justify-center gap-2 cursor-pointer"
+        lang="fa-AF"
+        dir="rtl"
+        className="text-xs font-bold text-[#241242]/70 hover:text-[#241242] underline underline-offset-4 transition-colors flex items-center gap-1.5 py-1.5 px-3 rounded-lg hover:bg-black/5 cursor-pointer"
       >
-        <RotateCcw className="w-5 h-5" />
-        <span>دوباره بازی کن (اتاق جدید) 🔄</span>
+        <RotateCcw className="w-3.5 h-3.5" />
+        <span>دوباره بازی کن</span>
       </button>
     </div>
   );
 };
+

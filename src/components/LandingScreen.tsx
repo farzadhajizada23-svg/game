@@ -146,24 +146,32 @@ export const LandingScreen: React.FC<LandingScreenProps> = ({
             )}
           </button>
         </form>
-      </motion.div>
 
-      {/* How it works info box */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
-        className="w-full bg-[#FFFDF6]/80 border-2 border-[#241242] rounded-xl p-4 mt-6 text-right shadow-[3px_3px_0px_0px_#241242]"
-      >
-        <div className="flex items-center gap-2 text-xs font-black text-[#241242] mb-2">
-          <Users className="w-4 h-4 text-[#00B89C]" />
-          <span>مراحل بازی:</span>
+        {/* 4-Step How to Play List in Dari */}
+        <div lang="fa-AF" dir="rtl" className="mt-6 pt-4 border-t-2 border-dashed border-[#241242]/20 text-right">
+          <div className="text-xs font-black text-[#241242] mb-3 flex items-center gap-1.5">
+            <Users className="w-4 h-4 text-[#00B89C]" />
+            <span>چگونه بازی کنیم؟ (۴ مرحله آسان):</span>
+          </div>
+          <div className="space-y-2.5">
+            <div className="flex items-start gap-2.5 text-xs text-[#241242] font-bold">
+              <span className="w-5 h-5 rounded-full bg-[#FF4D8D] text-white flex items-center justify-center shrink-0 border border-[#241242] text-[11px] font-black">۱</span>
+              <span className="mt-0.5 leading-relaxed">نام تان را در بالا بنویسید. یکی از شما یک کد بسازد و دیگری همان کد را وارد کند.</span>
+            </div>
+            <div className="flex items-start gap-2.5 text-xs text-[#241242] font-bold">
+              <span className="w-5 h-5 rounded-full bg-[#00B89C] text-white flex items-center justify-center shrink-0 border border-[#241242] text-[11px] font-black">۲</span>
+              <span className="mt-0.5 leading-relaxed">به ۶ سوال کوتاه در باره خودت با انتخاب یک حیوان جواب بده.</span>
+            </div>
+            <div className="flex items-start gap-2.5 text-xs text-[#241242] font-bold">
+              <span className="w-5 h-5 rounded-full bg-[#FFE066] text-[#241242] flex items-center justify-center shrink-0 border border-[#241242] text-[11px] font-black">۳</span>
+              <span className="mt-0.5 leading-relaxed">دوباره جواب بده، اما این بار حدس بزن که دوستت چی انتخاب کرده.</span>
+            </div>
+            <div className="flex items-start gap-2.5 text-xs text-[#241242] font-bold">
+              <span className="w-5 h-5 rounded-full bg-purple-300 text-[#241242] flex items-center justify-center shrink-0 border border-[#241242] text-[11px] font-black">۴</span>
+              <span className="mt-0.5 leading-relaxed">وقتی هردوی تان تمام کردید، نتیجه را باهم میبینید — لازم نیست در یک صفحه منتظر بمانید.</span>
+            </div>
+          </div>
         </div>
-        <ol className="text-xs text-[#241242]/80 space-y-1 pr-4 list-decimal font-semibold">
-          <li>پاسخ به ۶ سوال درباره خودتان با ایموجی حیوانات</li>
-          <li>حدس زدن پاسخ‌های دوستتان به همان ۶ سوال</li>
-          <li>مشاهده درصد همگامی و مقایسه نتایج دو نفره</li>
-        </ol>
       </motion.div>
     </div>
   );
